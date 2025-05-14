@@ -1,0 +1,2442 @@
+@charset "utf-8";
+
+
+/*******************************
+
+	body
+
+*******************************/
+
+body
+{
+	width: 100%;
+	height: 100%;
+	overflow-x: auto;
+	overflow-y: scroll;
+	background: #002f3e url(../img/bg.gif) repeat 50% 0 fixed;
+	font-size: 12px;
+	font-family: "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
+	line-height: 15px;
+}
+
+body.off
+{
+	background: url(../img/bg_stop.gif) repeat 50% 0 #002f3e;
+}
+
+body.off *
+{
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+}
+
+
+/*******************************
+
+	cover
+
+*******************************/
+
+#cover
+{
+	width: 100%;
+	height: 100%;
+	background: #002f3e url(../img/bg_stop.gif) repeat 50% 0 fixed;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#cover div
+{
+	width: 100%;
+	height: 100%;
+	background: url(../img/loading.gif) no-repeat 50% 50%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+}
+
+
+/*******************************
+
+	wrap
+
+*******************************/
+
+#wrap
+{
+	width: 982px;
+	background: url(../img/content_bg_shadow.png) repeat-y 50% 0;
+	margin: 0 auto;
+	padding: 0 55px;
+}
+
+#wrap.off
+{
+	width: 1054px;
+	/*height: 100%;*/
+	background: #C1FFF4;
+	padding: 0;
+	overflow: hidden;
+}
+
+#container
+{
+	width: 982px;
+	/*height: 100%;*/
+	background-image: url(../img/container_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: 0 0;
+	/*padding-bottom: 5000px;*/
+	position: relative;
+}
+
+#container.top
+{
+	background-position: 0 100%;
+}
+
+body.off #container
+{
+	position: fixed;
+}
+
+#wrap.off #container
+{
+	width: 1054px;
+	background: none;
+}
+
+body.off #container.off
+{
+	display: none;
+}
+
+/*******************************
+
+	top
+
+*******************************/
+
+#top_sky
+{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: url(../img/blinder.png) repeat-y 0 0;
+}
+
+#wrap.off #top_sky
+{
+	background: url(../img/blinder.png) repeat-y 0 0;
+}
+
+body.off #top_sky
+{
+	display: block;
+	background: url(../img/top_bg_skytop.jpg) no-repeat 50% 100% #C1FFF4;
+}
+
+#top_sky p
+{
+	display: none;
+	width: 269px;
+	height: 100%;
+	background: url(../img/game_ending.png) no-repeat 0 50%;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#top_sky.end
+{
+	background: none;
+}
+
+#top_sky.end p
+{
+	display: block;
+}
+
+
+/*******************************
+
+	top
+
+*******************************/
+
+#top
+{
+	width: 982px;
+	height: 723px;
+	background: url(../img/top_bg_sky.jpg) no-repeat 0 0 #C2FDF7;
+	overflow: hidden;
+	position: relative;
+}
+
+#top.catch
+{
+	height: 938px;
+	background: none;
+}
+
+#top h1
+{
+	width: 982px;
+	height: 95px;
+	background-image: url(../img/catchball_logo.png);
+	background-position: 240px 0;
+	background-repeat: no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 177px;
+}
+
+#top h2
+{
+	width: 982px;
+	height: 20px;
+	background-image: url(../img/catchball_txt.png);
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 312px;
+}
+
+#top.catch h1,
+#top.catch h2
+{
+	background-position: 50% 100%;
+}
+
+#top #cloud
+{
+	width: 1564px;
+	height: 1615px;
+	background: url(../img/top_bg_cloud.png) no-repeat 0 0;
+	position: absolute;
+	bottom: 600px;
+	left: -291px;
+	text-indent: 1564px;
+    white-space: nowrap;
+    overflow: hidden;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: rotation 2400s linear infinite;
+    -webkit-animation: rotation 2400s linear infinite;
+    -moz-animation: rotation 2400s linear infinite;
+}
+
+#top #backview
+{
+	width: 341px;
+	height: 121px;
+	background: url(../img/chtr_backview.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 381px;
+	left: 116px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#top #riverback
+{
+	width: 293px;
+	height: 81px;
+	background: url(../img/chtr_riverback.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 417px;
+	left: 552px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) 1s infinite;
+    -webkit-animation: translate_x 1s steps(1) 1s infinite;
+    -moz-animation: translate_x 1s steps(1) 1s infinite;
+}
+
+#top #building_01
+{
+	width: 123px;
+	height: 92px;
+	background: url(../img/chtr_building_01.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 381px;
+	left: 181px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_push 2s steps(1) 1s infinite;
+    -webkit-animation: translate_x_push 2s steps(1) 1s infinite;
+    -moz-animation: translate_x_push 2s steps(1) 1s infinite;
+}
+
+#top #building_02
+{
+	width: 60px;
+	height: 62px;
+	background: url(../img/chtr_building_02.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 435px;
+	left: 344px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_push 2s steps(1) infinite;
+    -webkit-animation: translate_x_push 2s steps(1) infinite;
+    -moz-animation: translate_x_push 2s steps(1) infinite;
+}
+
+#top #fuji
+{
+	width: 169px;
+	height: 187px;
+	background: url(../img/chtr_fuji.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 244px;
+	left: 0;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 2s steps(3) infinite;
+    -webkit-animation: translate_x 2s steps(3) infinite;
+    -moz-animation: translate_x 2s steps(3) infinite;
+}
+
+#top #tower
+{
+	width: 101px;
+	height: 220px;
+	background: url(../img/chtr_tower.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 279px;
+	left: 267px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 2s steps(3) 1s infinite;
+    -webkit-animation: translate_x 2s steps(3) 1s infinite;
+    -moz-animation: translate_x 2s steps(3) 1s infinite;
+}
+
+#top #train
+{
+	width: 11px;
+	height: 277px;
+	background: url(../img/chtr_train.png) no-repeat 11px 72px;
+	position: absolute;
+	top: 216px;
+	left: 573px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#top #train.go
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_train 3s steps(1) 5s 1;
+    -webkit-animation: translate_train 3s steps(1) 5s 1;
+    -moz-animation: translate_train 3s steps(1) 5s 1;
+}
+
+#top #train.back
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_train_back 3s steps(1) 5s 1;
+    -webkit-animation: translate_train_back 3s steps(1) 5s 1;
+    -moz-animation: translate_train_back 3s steps(1) 5s 1;
+}
+
+#top #railroad
+{
+	width: 409px;
+	height: 227px;
+	background: url(../img/top_railroad.png) no-repeat 0 100%;
+	position: absolute;
+	top: 266px;
+	left: 573px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#top #rock
+{
+	width: 232px;
+	height: 114px;
+	background: url(../img/chtr_rock.png) no-repeat 0 100%;
+	position: absolute;
+	top: 384px;
+	left: 767px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#top #doll
+{
+	width: 97px;
+	height: 114px;
+	background: url(../img/chtr_doll.png) no-repeat 0 100%;
+	position: absolute;
+	top: 535px;
+	left: 162px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#top.catch #cloud,
+#top.catch #backview,
+#top.catch #riverback,
+#top.catch #building_01,
+#top.catch #building_02,
+#top.catch #fuji,
+#top.catch #tower,
+#top.catch #pc,
+#top.catch #glove,
+#top.catch #train,
+#top.catch #railroad,
+#top.catch #rock,
+#top.catch #doll
+{
+	display: none;
+}
+
+#notify
+{
+	width: 207px;
+	height: 123px;
+	position: absolute;
+	left: -45px;
+	margin-top: -699px;
+	/*position: fixed;
+	margin-left: -529px;
+	top: 31px;
+	left: 50%;*/
+}
+
+#notify a
+{
+	display: block;
+	width: 207px;
+	height: 123px;
+	background: url(../img/notify.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_s 0.4s steps(3) infinite;
+    -webkit-animation: translate_x_s 0.4s steps(3) infinite;
+    -moz-animation: translate_x_s 0.4s steps(3) infinite;
+}
+
+#notify.nodisp
+{
+	display: none;
+}
+
+
+/*******************************
+
+	infotxt
+
+*******************************/
+
+#infotxt
+{
+	width: 982px;
+	height: 721px;
+	background: url(../img/top_bg_river.png) no-repeat 0 0;
+	position: absolute;
+	top: 252px;
+}
+
+#top.catch #infotxt
+{
+	background: none;
+	top: 130px;
+}
+
+#infotxt>div
+{
+	width: 982px;
+	padding-top: 377px;
+	background: url(../img/top_bg_green.jpg) no-repeat 0 100%;
+}
+
+#top.catch #infotxt>div
+{
+	background: none;
+}
+
+#infotxt>div>p
+{
+	width: 982px;
+	height: 94px;
+	background: url(../img/top_infotxt.png) no-repeat 50% 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/*******************************
+
+	content
+
+*******************************/
+
+#content
+{
+	width: 982px;
+	padding-top: 97px;
+	background: url(../img/content_bg.jpg) no-repeat 0 0;
+}
+
+#content h3
+{
+	width: 134px;
+	height: 134px;
+	margin: 0 auto;
+	background-image: url(../img/sbttl_bg.gif);
+	background-repeat: no-repeat;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_y 1s steps(1) infinite;
+    -webkit-animation: translate_y 1s steps(1) infinite;
+    -moz-animation: translate_y 1s steps(1) infinite;
+}
+
+#content h3 span
+{
+	width: 134px;
+	height: 134px;
+	display: block;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#projects h3 span
+{
+	background-image: url(../img/sbttl_projects.png);
+}
+
+#prizes h3 span
+{
+	background-image: url(../img/sbttl_prizes.png);
+}
+
+#company h3 span
+{
+	background-image: url(../img/sbttl_company.png);
+}
+
+#content a.banner
+{
+	display: block;
+	width: 270px;
+	height: 74px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: no-repeat 0 0;
+}
+
+#content a.banner:hover			{ background-position: 0 100%; }
+#content a.banner.contact		{ background-image: url(../img/banners_contact.jpg); }
+#content a.banner.workinginfo	{ background-image: url(../img/banners_workinginfo.png); }
+
+
+/*******************************
+
+	projects
+
+*******************************/
+
+#projects
+{
+	width: 982px;
+	position: relative;
+	padding-bottom: 70px;
+}
+
+#projects a.banner.workinginfo
+{
+	width: 256px;
+	height: 81px;
+	position: absolute;
+	top: 56px;
+	right: 47px;
+	background-image: url(../img/btn_workinginfo.png);
+}
+
+#projects #pc
+{
+	width: 214px;
+	height: 161px;
+	background: url(../img/chtr_pc.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: -95px;
+	left: 8px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_back 4s steps(5) infinite;
+    -webkit-animation: translate_x_back 4s steps(5) infinite;
+    -moz-animation: translate_x_back 4s steps(5) infinite;
+}
+
+#projects #glove
+{
+	width: 148px;
+	height: 102px;
+	background: url(../img/chtr_glove.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: -83px;
+	left: 794px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#projects ul
+{
+	width: 908px;
+	margin: 10px auto 0;
+	overflow: hidden;
+}
+
+#projects ul li
+{
+	width: 227px;
+	min-height: 230px;
+	list-style: none;
+	float: left;
+	position: relative;
+}
+
+#projects ul li>span
+{
+	width: 44px;
+	height: 29px;
+	display: block;
+	background: url(../img/projects_year.png) no-repeat 0 0;
+	position: absolute;
+	left: 1px;
+	padding: 6px 47px 0 0;
+	font-size: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	line-height: 17px;
+}
+
+#projects ul li>div
+{
+	padding: 18px 13px 0;
+}
+
+#projects ul li img
+{
+	box-shadow: 0 3px 5px #527112;
+	-webkit-box-shadow: 0 3px 5px #527112;
+	-moz-box-shadow: 0 3px 5px #527112;
+	-ms-box-shadow: 0 3px 5px #527112;
+	-o-box-shadow: 0 3px 5px #527112;
+}
+
+#projects ul li dl
+{
+	width: 201px;
+	margin-top: 8px;
+	text-shadow: 0 2px 1px #608515;
+	-webkit-text-shadow: 0 2px 1px #608515;
+	-moz-text-shadow: 0 2px 1px #608515;
+	-ms-text-shadow: 0 2px 1px #608515;
+	-o-text-shadow: 0 2px 1px #608515;
+}
+
+#projects ul li dt
+{
+	background: url(../img/icon_ball.png) no-repeat 0 0;
+	padding: 0 0 0 18px;
+}
+
+#projects ul li dd
+{
+	/*background: url(../img/projects_dotline.gif) no-repeat 0 0;
+	padding-top: 8px;*/
+	padding: 0 0 0 18px;
+}
+#projects #sp_pc,
+#projects #sp_glove
+{
+	display: none;
+}
+
+#projects a.morebttn
+{
+	display: block;
+	width: 312px;
+	height: 57px;
+	overflow: hidden;
+	margin: 20px auto 0;
+	background: url(../img/bttn_all_project.png) no-repeat 0 0;
+	white-space: nowrap;
+	text-indent: 100%;
+}
+
+#projects a.morebttn:hover
+{
+	background-position: 0 100%;
+}
+
+
+/*******************************
+
+	prizes
+
+*******************************/
+
+#prizes
+{
+	width: 1063px;
+	margin-left: -40px;
+	padding: 80px 0 190px 0;
+	overflow: hidden;
+	background: url(../img/fence.png) no-repeat 50% 100%;
+	position: relative;
+}
+
+#prizes>div
+{
+	width: 882px;
+	margin: 29px auto 0;
+}
+
+#prizes h4
+{
+	width: 44px;
+	height: 22px;
+	background: url(../img/prizes_year.png) no-repeat 0 0;
+	padding: 6px 54px 0 0;
+	font-size: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	text-align: center;
+	line-height: 17px;
+	float: left;
+}
+
+#prizes ul
+{
+	width: 626px;
+	padding: 45px 0 0 13px;
+	overflow: hidden;
+	margin: 0 auto;
+	text-shadow: 0 2px 1px #608515;
+	-webkit-text-shadow: 0 2px 1px #608515;
+	-moz-text-shadow: 0 2px 1px #608515;
+	-ms-text-shadow: 0 2px 1px #608515;
+	-o-text-shadow: 0 2px 1px #608515;
+}
+
+#prizes ul li
+{
+	width: 265px;
+	padding: 0 13px 10px 22px;
+	float: left;
+	background: url(../img/icon_ball.png) no-repeat 0 0;
+	list-style: none;
+}
+
+#prizes ul li dl
+{
+	width: 766px;
+	overflow: hidden;
+}
+
+#prizes ul li dt
+{
+	width: 350px;
+	background: url(../img/prizes_dotline.gif) repeat-x 100% 6px;
+	float: left;
+}
+
+#prizes ul li dt span
+{
+	background: url(../img/prizes_txt_bg.jpg);
+	padding-right: 10px;
+}
+
+#prizes ul li dd
+{
+	width: 406px;
+	padding-left: 10px;
+	float: right;
+}
+
+#prizes #trophy
+{
+	width: 146px;
+	height: 208px;
+	background: url(../img/chtr_trophy.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 311px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#prizes #plaque
+{
+	width: 87px;
+	height: 139px;
+	background: url(../img/chtr_plaque.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 28px;
+	left: 616px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#prizes #dog_g
+{
+	width: 148px;
+	height: 146px;
+	background: url(../img/chtr_dog_g.png) no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 1px;
+	left: 692px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#prizes #dog_g.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+}
+
+/*******************************
+
+	company
+
+*******************************/
+
+#company
+{
+	width: 982px;
+	margin: -18px 0 0 -55px;
+	padding: 0 41px 0 55px;
+	overflow: hidden;
+	background: url(../img/fence.png) no-repeat 15px 100%;
+	position: relative;
+}
+
+#company #chld_jumping,
+#company #cp
+{
+	display: none;
+}
+
+#company #pole
+{
+	width: 98px;
+	height: 96px;
+	background: url(../img/chtr_pole.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 11px;
+	left: 637px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#company #glove_s
+{
+	width: 125px;
+	height: 108px;
+	background: url(../img/chtr_glove_s.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: -6px;
+	left: 373px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#company #chld_writing
+{
+	width: 74px;
+	height: 117px;
+	background: url(../img/chtr_chld_writing.png) no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 277px;
+	left: 861px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#company #chld_writing.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+}
+
+#company #dog_b
+{
+	width: 175px;
+	height: 146px;
+	background: url(../img/chtr_dog_b.png) no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 423px;
+	right: 46px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#company #dog_b.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+}
+
+#company ul.banners
+{
+	width: 918px;
+	overflow: hidden;
+	margin: 0 auto 36px;
+}
+
+#company ul.banners li
+{
+	width: 270px;
+	float: left;
+	padding: 0 18px;
+	list-style: none;
+}
+
+#brief
+{
+	width: 932px;
+	margin: -19px 0 10px 50px;
+	padding-top: 40px;
+	overflow: hidden;
+	background: url(../img/company_playpit.png) no-repeat 576px 0;
+}
+
+#brief a.morebttn
+{
+	display: block;
+	width: 110px;
+	height: 20px;
+	background-image: url(../img/bttn_more.png);
+	background-repeat: no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 23px;
+	left: 21px;
+}
+
+#brief a.morebttn:hover
+{
+	background-position: 0 100%;
+}
+
+#brief dt
+{
+	padding-left: 19px;
+	background: url(../img/icon_ball.png) no-repeat 0 50%;
+}
+
+#brief dt span
+{
+	width: 159px;
+	height: 16px;
+	display: block;
+	background: url(../img/company_info.png) no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#brief dt.name span			{ background-position: 0 0; }
+#brief dt.add span			{ background-position: 0 -16px; }
+#brief dt.mail span			{ background-position: 0 -32px; height: 36px; }
+#brief dt.business span		{ background-position: 0 -68px; }
+#brief dt.philosophy span	{ background-position: 0 -84px; }
+
+#brief dd
+{
+	width: 396px;
+	margin: -17px 0 5px 0;
+	padding-left: 188px;
+	line-height: 20px;
+	overflow: hidden;
+	position: relative;
+	text-shadow: 0 2px 1px #608515;
+	-webkit-text-shadow: 0 2px 1px #608515;
+	-moz-text-shadow: 0 2px 1px #608515;
+	-ms-text-shadow: 0 2px 1px #608515;
+	-o-text-shadow: 0 2px 1px #608515;
+}
+
+#brief dd.mail
+{
+	margin-top: -33px;
+	height: 36px;
+}
+
+#brief dd h4
+{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#brief dd span
+{
+	float: left;
+}
+
+#brief dd a.mapbttn
+{
+	margin: 0 0 0 10px;
+}
+
+#brief dd p
+{
+	width: 380px;
+}
+
+#brief dd ul,
+#brief dd ol
+{
+	padding-left: 1em;
+	margin-bottom: 14px;
+}
+
+#brief dd ul	{ padding-left: 2em; }
+
+#brief dd ul li,
+#brief dd ol li
+{
+	list-style-position: outside;
+}
+
+#brief dd ol li		{ font-weight: bold; }
+#brief dd ol li p	{ font-weight: normal; }
+
+
+/*******************************
+
+	map
+
+*******************************/
+
+#map
+{
+	width: 982px;
+	height: 716px;
+	padding-bottom: 320px;
+	position: relative;
+}
+
+#map #notify_ball
+{
+	width: 123px;
+	height: 124px;
+	position: absolute;
+	left: 813px;
+	top: 0;
+}
+
+#map #notify_ball.nodisp
+{
+	display: none;
+}
+
+#map #notify_ball a
+{
+	display: block;
+	width: 123px;
+	height: 124px;
+	background: url(../img/notify_ball.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_s 0.4s steps(3) infinite;
+    -webkit-animation: translate_x_s 0.4s steps(3) infinite;
+    -moz-animation: translate_x_s 0.4s steps(3) infinite;
+}
+
+#map #notify_ball a:hover
+{
+	background-position: 0 -124px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+}
+
+#map #map_canvas
+{
+	width: 509px;
+	height: 304px;
+	padding: 7px 8px 9px 8px;
+	overflow: hidden;
+	position: absolute;
+	top: 241px;
+	right: 42px;
+}
+
+#map #map_canvas div.gm
+{
+	width: 509px;
+	height: 304px;
+	position: relative;
+}
+
+#map #map_canvas img.frame
+{
+	position: absolute;
+}
+
+#map #map_canvas img.frame.top	{ top: 0; left: 0; }
+#map #map_canvas img.frame.btm	{ bottom: 0; left: 0; }
+#map #map_canvas img.frame.left	{ top: 13px; left: 0; }
+#map #map_canvas img.frame.right	{ top: 13px; right: 0; }
+
+#map #chtr_map
+{
+	width: 88px;
+	height: 65px;
+	min-height: 0;
+	background: url(../img/chtr_map.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 128px;
+	left: 639px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_s 1s steps(3) infinite;
+    -webkit-animation: translate_x_s 1s steps(3) infinite;
+    -moz-animation: translate_x_s 1s steps(3) infinite;
+}
+
+#map #making
+{
+	width: 74px;
+	height: 149px;
+	min-height: 0;
+	background: url(../img/chtr_chld_making.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 119px;
+	left: 759px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#map #making.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+}
+
+#map #map_parts
+{
+	width: 92px;
+	height: 67px;
+	min-height: 0;
+	background: url(../img/map_img_parts.gif) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 149px;
+	left: 835px;
+}
+
+#map #tree
+{
+	width: 457px;
+	height: 836px;
+	background: url(../img/map_tree.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	bottom: 161px;
+	left: -55px;
+}
+
+#map #bird
+{
+	width: 85px;
+	height: 78px;
+	background: url(../img/chtr_bird.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	bottom: 934px;
+	left: 138px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#map #bird.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+}
+
+#map #mole
+{
+	width: 127px;
+	height: 75px;
+	min-height: 0;
+	background: url(../img/chtr_mole.png) no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	top: 453px;
+	left: 283px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+	animation: translate_x 1s steps(1) infinite;
+	-webkit-animation: translate_x 1s steps(1) infinite;
+	-moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#map #mole.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+}
+
+#map_txt
+{
+	width: 345px;
+	background: url(../img/map_logo.png) no-repeat 0 24px;
+	margin-left: 50px;
+	padding-top: 70px;
+	line-height: 22px;
+	text-shadow: 0 2px 1px #666;
+	-webkit-text-shadow: 0 2px 1px #666;
+	-moz-text-shadow: 0 2px 1px #666;
+	-ms-text-shadow: 0 2px 1px #666;
+	-o-text-shadow: 0 2px 1px #666;
+}
+
+#map_txt span.icon_m
+{
+	display: block;
+	padding-left: 22px;
+	margin: 12px 0;
+	background: url(../img/icon_mail.gif) no-repeat 0 50%;
+}
+
+#map_txt a.mapbttn
+{
+	margin-top: 8px;
+}
+
+#map_txt>p
+{
+	height: 43px;
+	padding: 12px 0 26px 65px;
+	line-height: 1.5em;
+	text-shadow: 0 2px 1px #608515;
+	-webkit-text-shadow: 0 2px 1px #608515;
+	-moz-text-shadow: 0 2px 1px #608515;
+	-ms-text-shadow: 0 2px 1px #608515;
+	-o-text-shadow: 0 2px 1px #608515;
+}
+
+#map_txt p.recruit
+{
+	width: 277px;
+	padding: 0;
+	line-height: 1.4em;
+	text-shadow: 0 2px 1px #666;
+	-webkit-text-shadow: 0 2px 1px #666;
+	-moz-text-shadow: 0 2px 1px #666;
+	-ms-text-shadow: 0 2px 1px #666;
+	-o-text-shadow: 0 2px 1px #666;
+}
+
+#route
+{
+	width: 460px;
+	position: absolute;
+	top: 569px;
+	right: 42px;
+}
+
+#route p
+{
+	height: 69px;
+	padding: 12px 0 0 62px;
+	float: left;
+	line-height: 1.5em;
+	text-shadow: 0 2px 1px #608515;
+	-webkit-text-shadow: 0 2px 1px #608515;
+	-moz-text-shadow: 0 2px 1px #608515;
+	-ms-text-shadow: 0 2px 1px #608515;
+	-o-text-shadow: 0 2px 1px #608515;
+}
+
+#route p.metro_i
+{
+	width: 154px;
+	background: url(../img/map_notice_i.png) no-repeat 0 0;
+}
+
+#route p.metro_h
+{
+	width: 182px;
+	background: url(../img/map_notice_h.png) no-repeat 0 0;
+}
+
+#route p.metro_e_a
+{
+	width: 301px;
+	padding-left: 112px;
+	margin: -16px 0 0 47px;
+	background: url(../img/map_notice_e_a.png) no-repeat 0 0;
+}
+
+
+/*******************************
+
+	bbs
+
+*******************************/
+
+#bbs
+{
+	width: 982px;
+	margin-top: -279px;
+	position: relative;
+	background: url(../img/bbs_bg_bottom.jpg) no-repeat 0 214px;
+}
+
+#bbs>ul
+{
+	width: 828px;
+	height: 235px;
+	background: url(../img/bbs_bg.png) no-repeat 0 0;
+	margin: 0 auto;
+	position: relative;
+}
+
+#bbs>ul li
+{
+	height: 20px;
+	list-style: none;
+	position: absolute;
+}
+
+#bbs>ul li.on
+{
+	background: url(../img/bbs_light.png) no-repeat 1px 2px;
+}
+
+#bbs>ul li p
+{
+	background-repeat: no-repeat;
+	background-position: 0 50px;
+}
+
+#bbs>ul li.on p
+{
+	background-position: 0 0;
+}
+
+#bbs>ul li.bbs_01 p
+{
+	background-image: url(../img/bbs_list_bg_01.png);
+}
+
+#bbs>ul li.bbs_02 p
+{
+	background-image: url(../img/bbs_list_bg_02.png);
+}
+
+#bbs>ul li.bbs_03 p
+{
+	background-image: url(../img/bbs_list_bg_03.png);
+}
+
+#bbs>ul li.bbs_04 p
+{
+	background-image: url(../img/bbs_list_bg_04.png);
+}
+
+#bbs>ul li.bbs_05 p
+{
+	background-image: url(../img/bbs_list_bg_05.png);
+}
+
+#bbs>ul li.bbs_06 p
+{
+	background-image: url(../img/bbs_list_bg_06.png);
+}
+
+#bbs>ul li.bbs_01
+{
+	width: 742px;
+	padding-left: 29px;
+	top: 45px;
+	left: 31px;
+}
+
+#bbs>ul li.bbs_02
+{
+	width: 719px;
+	padding-left: 28px;
+	top: 73px;
+	left: 43px;
+}
+
+#bbs>ul li.bbs_03
+{
+	width: 697px;
+	padding-left: 27px;
+	top: 100px;
+	left: 54px;
+}
+
+#bbs>ul li.bbs_04
+{
+	width: 674px;
+	padding-left: 27px;
+	top: 128px;
+	left: 65px;
+}
+
+#bbs>ul li.bbs_05
+{
+	width: 652px;
+	padding-left: 26px;
+	top: 156px;
+	left:76px;
+}
+
+#bbs>ul li.bbs_06
+{
+	width: 629px;
+	padding-left: 26px;
+	top: 183px;
+	left: 87px;
+}
+
+#bbs>ul li a
+{
+	display: block;
+	height: 22px;
+	font-size: 15px;
+	text-indent: 10px;
+	line-height: 22px;
+	color: #FFF;
+	text-decoration: none;
+	transform: rotateX(-50deg);
+	-moz-transform: rotateX(-50deg);
+	-ms-transform: rotateX(-50deg);
+	-o-transform: rotateX(-50deg);
+	text-shadow: 0 2px 1px #000;
+	-webkit-text-shadow: 0 2px 1px #000;
+	-moz-text-shadow: 0 2px 1px #000;
+	-ms-text-shadow: 0 2px 1px #000;
+	-o-text-shadow: 0 2px 1px #000;
+}
+
+#bbs>ul li.bbs_01 a
+{
+	width: 742px;
+}
+
+#bbs>ul li.bbs_02 a
+{
+	width: 719px;
+}
+
+#bbs>ul li.bbs_03 a
+{
+	width: 697px;
+}
+
+#bbs>ul li.bbs_04 a
+{
+	width: 674px;
+}
+
+#bbs>ul li.bbs_05 a
+{
+	width: 652px;
+}
+
+#bbs>ul li.bbs_06 a
+{
+	width: 629px;
+}
+
+#bbs ul li a:hover
+{
+	color: #ffe50d;
+}
+
+#bbs #bench
+{
+	width: 198px;
+	height: 148px;
+	background: url(../img/bbs_bench.png) no-repeat 0 0;
+	position: absolute;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	top: 201px;
+	right: -32px;
+}
+
+#bbs #chld_sleeping
+{
+	width: 103px;
+	height: 138px;
+	background: url(../img/chtr_chld_sleeping.png) no-repeat 0 0;
+	position: absolute;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	top: 224px;
+	left: 50px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#bbs #chld_sleeping.pos_02
+{
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x_b 1s steps(1) infinite;
+    -webkit-animation: translate_x_b 1s steps(1) infinite;
+    -moz-animation: translate_x_b 1s steps(1) infinite;
+}
+
+
+/*******************************
+
+	txtbox
+
+*******************************/
+
+#bbs #txtbox
+{
+	width: 982px;
+	height: 448px;
+	overflow: hidden;
+	margin-top: -21px;
+	position: relative;
+}
+
+#txtbox dl
+{
+	width: 618px;
+	height: 336px;
+	padding: 82px 182px 30px;
+	display: none;
+	text-shadow: 0 2px 1px #2F622B;
+	-webkit-text-shadow: 0 2px 1px #2F622B;
+	-moz-text-shadow: 0 2px 1px #2F622B;
+	-ms-text-shadow: 0 2px 1px #2F622B;
+	-o-text-shadow: 0 2px 1px #2F622B;
+}
+
+#bbs.bbs_01 #txtbox dl.bbs_01
+{
+	display: block;
+}
+
+#bbs.bbs_02 #txtbox dl.bbs_02
+{
+	display: block;
+}
+
+#bbs.bbs_03 #txtbox dl.bbs_03
+{
+	display: block;
+}
+
+#bbs.bbs_04 #txtbox dl.bbs_04
+{
+	display: block;
+}
+
+#bbs.bbs_05 #txtbox dl.bbs_05
+{
+	display: block;
+}
+
+#bbs.bbs_06 #txtbox dl.bbs_06
+{
+	display: block;
+}
+
+#txtbox dl dt
+{
+	width: 618px;
+	text-align: center;
+}
+
+#txtbox dl dt p.date
+{
+	width: 618px;
+	height: 28px;
+}
+
+#txtbox dl dt p.ttl
+{
+	width: 618px;
+	height: 35px;
+	background: url(../img/prizes_dotline.gif) repeat-x 100% 100%;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#txtbox dl dd
+{
+	width: 618px;
+	line-height: 20px;
+	padding-top: 17px;
+}
+
+#txtbox dl dd p.right
+{
+	width: 100%;
+	text-align: right;
+}
+
+#txtbox dl dd p.pdf
+{
+	width: 618px;
+	text-align: center;
+	position: absolute;
+	bottom: 50px;
+	margin: 0 auto;
+}
+
+#txtbox dl dd p.pdf span
+{
+	height: 30px;
+	padding-left: 38px;
+	background: url(../img/icon_pdf.png) no-repeat 0 0;
+	display: inline-block;
+	line-height: 30px;
+}
+
+#txtbox dl dd p.pdf span a
+{
+	text-decoration: underline;
+}
+
+#txtbox a#bbs_close
+{
+	display: none;
+	width: 34px;
+	height: 35px;
+	background-image: url(../img/bbs_btn_close.png);
+	background-repeat: no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 70px;
+	left: 764px;
+}
+
+#txtbox a#bbs_close:hover
+{
+	background-position: 0 100%;
+}
+
+#bbs.bbs_01 a#bbs_close,
+#bbs.bbs_02 a#bbs_close,
+#bbs.bbs_03 a#bbs_close,
+#bbs.bbs_04 a#bbs_close,
+#bbs.bbs_05 a#bbs_close,
+#bbs.bbs_06 a#bbs_close
+{
+	display: block;
+}
+
+
+/*******************************
+
+	catch
+
+*******************************/
+
+#catch
+{
+	width: 982px;
+	height: 7000px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/*******************************
+
+	top_catch
+
+*******************************/
+
+#top_catch
+{
+	width: 982px;
+	height: 7000px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#top_catch.nodisp
+{
+	display: none;
+}
+
+
+/*******************************
+
+	over
+
+*******************************/
+
+#over
+{
+	display: none;
+	width: 982px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+}
+
+#over.on
+{
+	display: block;
+}
+
+#over #ground
+{
+	width: 100%;
+	height: 3000px;
+	background: url(../img/container_bg.jpg) repeat-y 0 0;
+	position: absolute;
+}
+
+#over #ground.nodisp
+{
+	display: none;
+}
+
+#over #chld_catch
+{
+	width: 134px;
+	height: 246px;
+	background: url(../img/chtr_chld_catch.png) no-repeat 0 0;
+	position: absolute;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	bottom: 0;
+	left: 50%;
+	margin-left: -36px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+#over #chld_catch.top
+{
+	width: 127px;
+	height: 180px;
+	background: url(../img/chtr_chld_pitch.png) no-repeat 0 0;
+	position: absolute;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	top: 0;
+	left: 50%;
+	margin-left: -80px;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: translate_x 1s steps(1) infinite;
+    -webkit-animation: translate_x 1s steps(1) infinite;
+    -moz-animation: translate_x 1s steps(1) infinite;
+}
+
+
+/*******************************
+
+	black
+
+*******************************/
+
+#black
+{
+	width: 982px;
+	height: 100%;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+}
+
+#black p.fuki
+{
+	width: 400px;
+	height: 440px;
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	background: url(../img/ending_bg.png) no-repeat 50% 50%;
+	background-size: 0 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -200px;
+	visibility: hidden;
+}
+
+#black.end p.fuki
+{
+	visibility: visible;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: scale_bg 0.3s linear 1;
+    -webkit-animation: scale_bg 0.3s linear 1;
+    -moz-animation: scale_bg 0.3s linear 1;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+}
+
+#black p.txt
+{
+	width: 300px;
+	height: 300px;
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	background: url(../img/ending_txt.png) no-repeat 50% 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -180px 0 0 -150px;
+	visibility: hidden;
+	
+	transform: scale( 0, 0 );
+	-webkit-transform: scale( 0, 0 );  
+	-moz-transform: scale( 0, 0 );
+}
+
+#black.end p.txt
+{
+	visibility: visible;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: scale 0.3s linear 1;
+    -webkit-animation: scale 0.3s linear 1;
+    -moz-animation: scale 0.3s linear 1;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+}
+
+#black p.notify
+{
+	width: 460px;
+	height: 460px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -240px 0 0 -230px;
+	opacity: 0;
+}
+
+#black p.notify a
+{
+	display: block;
+	width: 460px;
+	height: 460px;
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	background: url(../img/ending_notify.png) no-repeat 0 0;
+}
+
+#black p.notify a:hover
+{
+	background-position: 0 -460px;
+}
+
+#black.next p.notify
+{
+	opacity: 1;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: scaleout 0.2s linear 1;
+    -webkit-animation: scaleout 0.2s linear 1;
+    -moz-animation: scaleout 0.2s linear 1;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+}
+
+#black.last p.notify
+{
+	opacity: 1;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+    animation: scale 0.3s linear 1;
+    -webkit-animation: scale 0.3s linear 1;
+    -moz-animation: scale 0.3s linear 1;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+}
+
+#black p.stash
+{
+	width: 982px;
+	height: 100%;
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#black.end p.stash
+{
+	visibility: visible;
+	
+	/*-------------------
+		css animation
+	-------------------*/
+	animation: fadein 0.3s 0.7s linear 1;
+    -webkit-animation: fadein 0.3s 0.7s linear 1;
+    -moz-animation: fadein 0.3s 0.7s linear 1;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+}
+
+#ball
+{
+	width: 30px;
+	height: 30px;
+	background: url(../img/ball_shadow.png) no-repeat 0 0;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -15px 0 0 -15px;
+	opacity: 0;
+}
+
+#ball.off
+{
+	visibility: hidden;
+}
+
+
+/*******************************
+
+	footer
+
+*******************************/
+
+#footer
+{
+	width: 982px;
+	height: 64px;
+	background: url(../img/footer_bg.png) repeat-x 0 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#footer p.cr
+{
+	width: 982px;
+	height: 49px;
+	margin-top: 15px;
+	background: url(../img/copyright.png) no-repeat 50% 50%;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#footer p.blog
+{
+	width: 43px;
+	height: 13px;
+	position: absolute;
+	top: 33px;
+	left: 16px;
+}
+
+#footer p.blog a
+{
+	display: block;
+	width: 43px;
+	height: 13px;
+	background-image: url(../img/footer_bttn_blog.png);
+	background-repeat: no-repeat;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#footer p.blog a:hover
+{
+	background-position: 0 -13px;
+}
+
+#footer p.fb,
+#footer p.tw
+{
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 27px;
+}
+
+#footer p.fb
+{
+	left: 862px;
+}
+
+#footer p.tw
+{
+	left: 888px;
+}
+
+#footer p.fb a,
+#footer p.tw a
+{
+	width: 21px;
+	height: 21px;
+	display: block;
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+}
+
+#footer p.fb a
+{
+	background-image: url(../img/sns_bttn_fb.png);
+}
+
+#footer p.tw a
+{
+	background-image: url(../img/sns_bttn_tw.png);
+}
+
+#footer p.fb a:hover,
+#footer p.tw a:hover
+{
+	background-position: 0 -21px;
+}
+
+
+/*******************************
+
+	like
+
+*******************************/
+
+#like
+{
+	width: 59px;
+	height: 59px;
+	background-image: url(../img/sns_bttn_like.png);
+	margin: -64px 0 0 911px;
+	position: relative;
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#like.view
+{
+	width: 99px;
+	height: 87px;
+	margin: -87px 0 0 891px;
+	text-indent: 1em;
+    white-space: normal;
+	overflow: hidden;
+	background-position: 0 100%;
+}
+
+#like:hover
+{
+	background-position: 0 -59px;
+}
+
+#like.view:hover
+{
+	background-position: 0 100%;
+}
+
+#like div.fb-like
+{
+	display: block;
+	margin: 20px 0 0 3px;
+}
+
+
+/*******************************
+
+	allblack
+
+*******************************/
+
+#allblack
+{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.85;
+	-moz-opacity: 0.85;                 /* FF lt 1.5, Netscape */
+	-khtml-opacity: 0.85;              /* Safari 1.x */
+	-ms-filter: "alpha(opacity=85)";  /* ie 8 */
+	filter: alpha(opacity=85);        /* ie lt 8 */
+	text-indent: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+#allblack.on
+{
+	display: block;
+}
+
+
+/*******************************
+
+	noflashBox
+
+*******************************/
+
+#noflashBox
+{
+	width: 982px;
+	height: 100%;
+	min-height: 600px;
+	background: url(../img/nofla_bg.png) repeat 0 0 #c5fff5;
+	position: relative;
+	margin: 0 auto;
+}
+
+#noflashBox.nodisp
+{
+	display: none;
+}
+
+#noflashBox a#nofla_close
+{
+	width: 45px;
+	height: 46px;
+	background: url(../img/nofla_bttn.gif) no-repeat 0 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	top: 50px;
+	right: 55px;
+}
+
+#noflashBox a#nofla_close:hover
+{
+	background-position: 0 100%;
+}
+
+#noflashBox div
+{
+	width: 380px;
+	height: 262px;
+	background: url(../img/nofla_ufo.gif) no-repeat 50% 100%;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin: -131px 0 0 -190px;
+}
+
+#noflashBox h1
+{
+	width: 199px;
+	height: 71px;
+	background: url(../img/nofla_ttl.png) no-repeat 0 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0 auto 42px;
+}
+
+#noflashBox p
+{
+	width: 380px;
+	height: 83px;
+	background: url(../img/nofla_txt.gif) no-repeat 0 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#noflashBox div a
+{
+	display: block;
+	height: 16px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+}
+
+#noflashBox div a.link_01
+{
+	width: 168px;
+	background: url(../img/nofla_link_01.gif) no-repeat 0 0;
+	top: 136px;
+	left: 85px;
+}
+
+#noflashBox div a.link_02
+{
+	width: 141px;
+	background: url(../img/nofla_link_02.gif) no-repeat 0 0;
+	top: 159px;
+	left: 0;
+}
